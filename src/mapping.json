@@ -1,0 +1,19 @@
+{
+  "components": {
+    "Select": {
+      "meta": {},
+      "appearances": {
+        "default": {
+          "variantGroups": {
+            "status": {
+              "basic": {
+                "borderColor": "#FFFFFF",
+                "backgroundColor": "#FFFFFF"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

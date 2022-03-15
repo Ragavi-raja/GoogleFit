@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "103994216528",
+    "firebase_url": "https://seek-7acb0-default-rtdb.firebaseio.com",
+    "project_id": "seek-7acb0",
+    "storage_bucket": "seek-7acb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103994216528:android:3441455caed8d651508155",
+        "android_client_info": {
+          "package_name": "com.rgvi.seek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103994216528-dousqknbh2tkh67jctabsc78ohuqpaa5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rgvi.seek",
+            "certificate_hash": "1938cb227b610afeba00df68741e5832d7906f16"
+          }
+        },
+        {
+          "client_id": "103994216528-fp1ii0bfbsk4hrccafv1p53pgnc7tjcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhvuEVApzy_9yYTC4m5TObuEACHocC7EU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103994216528-fp1ii0bfbsk4hrccafv1p53pgnc7tjcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
