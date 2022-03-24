@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-
+<queries>
+    <package android:name="com.google.android.apps.fitness" />
+</queries>
     <application
         android:usesCleartextTraffic="true"
         tools:targetApi="28"

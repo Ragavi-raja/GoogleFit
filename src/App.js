@@ -143,7 +143,7 @@ const AppNavigator = () => (
       backgroundColor={Themes.linear_gradient_end}
       barStyle={'light-content'}
     /> */}
-    <Navigator screenOptions={{headerShown: false}} initialRouteName="Splash">     
+    <Navigator screenOptions={{headerShown: false}} initialRouteName="Login">     
       <Screen name="Splash" component={SplashScreen} header="null" />    
       <Screen name="Login" component={LoginScreen} header="null" />
       <Screen name="HomeScreen" component={HomeScreen} />

@@ -36,31 +36,35 @@ export default function HomeScreen({navigation, route}) {
     }
   };
   const logout = async () => {
+    ongoogle();
   
-    readData('emaillogin').then(async(_val) => {
-      if (_val == 'login') {
-        const user = await auth()
-          .signOut(email)
-          .catch(e => {
-            alert(e.code);
-          });
+    // readData('emaillogin').then(async(_val) => {
+    //   console.log("Logiut1",_val)
+    //   if (_val == 'login') {
+    //     const user = await auth()
+    //       .signOut(email)
+    //       .catch(e => {
+    //         alert(e.code);
+    //       });
 
-        if (user == undefined) {
-          dispatch(setActions.logOutData());
-          Keychain.resetGenericPassword();
-          saveData('emaillogin', '');
-          dispatch(setActions.logout());
-          navigation.dispatch(StackActions.replace('Login'));
-        }
-      }
-    });
-    readData('googlelogin').then(_val => {
-      if (_val == 'login') {
-        ongoogle();
-      } else {
-        setStages(3);
-      }
-    });
+    //     if (user == undefined) {
+    //       dispatch(setActions.logOutData());
+    //       Keychain.resetGenericPassword();
+    //       saveData('emaillogin', '');
+    //       dispatch(setActions.logout());
+    //       navigation.dispatch(StackActions.replace('Login'));
+    //     }
+    //   }
+    // });
+    // readData('googlelogin').then(_val => {
+    //   console.log("Logiut2",_val)
+    //   if (_val == 'login') {
+    //     console.log("Logiutd")
+    //     ongoogle();
+    //   } else {
+    //     setStages(3);
+    //   }
+    // });
   };
   useEffect(() => {
     if (userData.data != undefined) {

@@ -5,6 +5,7 @@ import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
 GoogleSignin.configure({
+  scopes: ['https://www.googleapis.com/auth/fitness.body.read'], 
   webClientId:
     '103994216528-fp1ii0bfbsk4hrccafv1p53pgnc7tjcg.apps.googleusercontent.com',
 });
@@ -69,20 +70,20 @@ export default function LoginScreen({navigation, route}) {
     const {idToken} = await GoogleSignin.signIn();
 
     const googleCredential = await auth.GoogleAuthProvider.credential(idToken);
-
+    
     const gsgup = await auth()
       .signInWithCredential(googleCredential)
       .catch(e => {
         seterrorResponse('error', e.code);
         dispatch(setActions.getLoginDataError(e.code));
       });
-      console.log(gsgup)
+     
     if (gsgup != undefined) {
       
       dispatch(setActions.getLoginDataSuccess(gsgup));
       saveData('googlelogin', 'login');
       saveData('googleloginid', idToken);
-
+      navigation.dispatch(StackActions.replace('HomeScreen'));
      
     }
   };
@@ -166,9 +167,9 @@ export default function LoginScreen({navigation, route}) {
     } else {
       setEnable(true);
     }
-    if (userData.data != undefined) {
-      navigation.dispatch(StackActions.replace('HomeScreen'));
-    }
+    // if (userData.data != undefined) {
+    //   navigation.dispatch(StackActions.replace('HomeScreen'));
+    // }
     
 
 
